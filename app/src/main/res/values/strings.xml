@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">ICONS Character Sheet</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_character_creation">Character Creation</string>
+    <string name="title_activity_character_selection">Character Selection</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="name_label">Name</string>
+    <string name="stamina_label">Stamina</string>
+    <string name="determination_label">Determination</string>
+    <string name="health_label">Health</string>
+    <string name="height_label">Height</string>
+    <string name="width_label">Width</string>
+    <string name="abilities_label">Abilities</string>
+    <string name="powers_label">Powers</string>
+    <string name="specialties_label">Specialties</string>
+    <string name="notes_label">Notes</string>
+    <string name="aspects_label">Aspects</string>
+    <string name="qualities_label">Qualities</string>
+    <string name="challenges_label">Challenges</string>
+
+    <string name="prowess">Prowess</string>
+    <string name="coordination">Coordination</string>
+    <string name="strength">Strength</string>
+    <string name="intellect">Intellect</string>
+    <string name="awareness">Awareness</string>
+    <string name="willpower">Willpower</string>
+</resources>
