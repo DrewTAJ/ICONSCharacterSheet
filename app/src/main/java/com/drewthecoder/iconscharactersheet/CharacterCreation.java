@@ -6,8 +6,29 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.NumberPicker;
 
 public class CharacterCreation extends AppCompatActivity {
+
+    EditText nameInput;
+    NumberPicker healthInput;
+    NumberPicker staminaInput;
+
+    NumberPicker strengthInput;
+    NumberPicker intellectInput;
+    NumberPicker prowessInput;
+    NumberPicker coordinationInput;
+    NumberPicker awarenessInput;
+    NumberPicker willpowerInput;
+
+
+    Button addSpecialty;
+    Button addNote;
+    Button addAspect;
+    Button addQuality;
+    Button addChallenge;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
