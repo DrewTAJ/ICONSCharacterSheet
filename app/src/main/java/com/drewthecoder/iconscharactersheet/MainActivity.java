@@ -1,5 +1,6 @@
 package com.drewthecoder.iconscharactersheet;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,6 +18,9 @@ import android.content.Intent;
 
 import org.w3c.dom.Text;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView name;
@@ -25,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
     TextView determination;
     TextView weight;
     TextView height;
+
+    TextView prowess;
+    TextView coordination;
+    TextView strength;
+    TextView intellect;
+    TextView awareness;
+    TextView willpower;
+
     String[] notes;
     String[] specialties;
     String[] qualities;
@@ -57,6 +69,14 @@ public class MainActivity extends AppCompatActivity {
         this.determination = (TextView) findViewById(R.id.determination);
         this.height = (TextView) findViewById(R.id.height);
         this.weight = (TextView) findViewById(R.id.weight);
+
+        this.prowess = (TextView) findViewById(R.id.prowess_input);
+        this.coordination = (TextView) findViewById(R.id.coordination);
+        this.strength = (TextView) findViewById(R.id.strength);
+        this.intellect = (TextView) findViewById(R.id.intellect);
+        this.awareness = (TextView) findViewById(R.id.awareness);
+        this.willpower = (TextView) findViewById(R.id.willpower);
+
         name.setText("STUFF");
         stamina.setText(Integer.toString(11));
         maximumHealth.setText(Integer.toString(11));
@@ -64,7 +84,23 @@ public class MainActivity extends AppCompatActivity {
         height.setText("6.6");
         weight.setText("170");
 
-        this.populateNotes(this.notes);
+        SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+        this.name.setText(prefs.getString("name", ""));
+        this.stamina.setText(prefs.getInt("stamina", 0));
+        this.maximumHealth.setText(prefs.getInt("health", 0));
+        this.determination.setText(prefs.getInt("determination", 0));
+
+        this.prowess.setText(prefs.getInt("prowess", 0));
+        this.coordination.setText(prefs.getInt("coordination", 0));
+        this.strength.setText(prefs.getInt("strength", 0));
+        this.intellect.setText(prefs.getInt("intellect", 0));
+        this.awareness.setText(prefs.getInt("awareness", 0));
+        this.willpower.setText(prefs.getInt("willpower", 0));
+
+        this.populateSection(R.id.notes_container, prefs.getStringSet("notes", new HashSet<String>()));
+        this.populateSection(R.id.specialties_container, prefs.getStringSet("specialties", new HashSet<String>()));
+        this.populateSection(R.id.qualities_container, prefs.getStringSet("qualities", new HashSet<String>()));
+        this.populateSection(R.id.challenges_container, prefs.getStringSet("challenges", new HashSet<String>()));
     }
 
     @Override
@@ -89,9 +125,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void populateNotes(String[] notes) {
+    public void populateSection(int id, Set<String> notes) {
         if(notes != null) {
-            LinearLayout root = (LinearLayout) findViewById(R.id.notesContainer);
+            LinearLayout root = (LinearLayout) findViewById(id);
             for (String note : notes) {
                 TextView textView = new TextView(this);
                 textView.setText(note);

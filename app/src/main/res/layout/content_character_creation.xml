@@ -34,7 +34,7 @@
                     tools:layout_editor_absoluteY="34dp" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:id="@+id/name_input"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -59,7 +59,7 @@
                     tools:layout_editor_absoluteY="93dp" />
 
                 <EditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/health_input"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -84,7 +84,7 @@
                     tools:layout_editor_absoluteY="167dp" />
 
                 <EditText
-                    android:id="@+id/editText7"
+                    android:id="@+id/stamina_input"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -166,7 +166,7 @@
                     android:text="@string/prowess" />
 
                 <EditText
-                    android:id="@+id/editText8"
+                    android:id="@+id/prowess_input"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -187,7 +187,7 @@
                     android:text="@string/coordination" />
 
                 <EditText
-                    android:id="@+id/editText2"
+                    android:id="@+id/coordination_input"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -293,27 +293,29 @@
                 android:textColor="@android:color/white" />
 
             <LinearLayout
+                android:id="@+id/powers_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/power_inputs_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"></LinearLayout>
+
+                <Button
+                    android:id="@+id/add_powers_button"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/willpower" />
-
-                <EditText
-                    android:id="@+id/editText9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number" />
-
+                    android:text="Button" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/specialties_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -328,7 +330,7 @@
                     android:textColor="@android:color/white" />
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/add_specialties_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Button" />
@@ -336,6 +338,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/notes_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -353,6 +356,7 @@
                     android:id="@+id/add_notes_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:clickable="true"
                     android:text="Button" />
             </LinearLayout>
 
@@ -379,6 +383,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/qualities_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -400,6 +405,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/challenges_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">

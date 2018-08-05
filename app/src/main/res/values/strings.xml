@@ -29,4 +29,24 @@
     <string name="intellect">Intellect</string>
     <string name="awareness">Awareness</string>
     <string name="willpower">Willpower</string>
+
+    <string name="specialty_placeholder">Specialty...</string>
+    <string name="note_placeholder">Note...</string>
+    <string name="quality_placeholder">Quality....</string>
+    <string name="challenge_placeholder">Challenge...</string>
+
+    <string name="power_name_placeholder">Name...</string>
+    <string name="power_value_placeholder">Value...</string>
+
+    <string name="name_placeholder">Name...</string>
+    <string name="health_placeholder">Health...</string>
+    <string name="stamina_placeholder">Stamina...</string>
+    <string name="determination_placeholder">Determination...</string>
+
+    <string name="prowess_placeholder">Prowess...</string>
+    <string name="coordination_placeholder">Coordination...</string>
+    <string name="strength_placeholder">Strength...</string>
+    <string name="intellect_placeholder">Intellect...</string>
+    <string name="awareness_placeholder">Awareness...</string>
+    <string name="willpower_placeholder">Willpower...</string>
 </resources>
